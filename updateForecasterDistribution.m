@@ -11,15 +11,10 @@
 
 
 function [ForecasterDistribution] = updateForecasterDistribution(ForecasterDistribution,alphas,betas,x,gamma)
-    likelihood = [];
     if(x == 1)
-        for i=1:length(ForecasterDistribution);
-            likelihood = [likelihood alphas(i)/(alphas(i)+betas(i))];
-        end
+        likelihood = alphas./(alphas + betas);
     else
-        for i=1:length(ForecasterDistribution);
-            likelihood = [likelihood betas(i)/(alphas(i)+betas(i))];
-        end
+        likelihood = betas./(alphas + betas);
     end
     w0 = gamma*sum(likelihood.*ForecasterDistribution); % Forecaster Newly created (using the original prior)
     ForecasterDistribution = (1-gamma).*likelihood.*ForecasterDistribution; % Updating forecaster Distribution

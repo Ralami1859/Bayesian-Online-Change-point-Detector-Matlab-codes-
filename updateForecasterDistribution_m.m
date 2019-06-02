@@ -11,16 +11,13 @@
 
 
 function [ForecasterDistribution, PseudoDist,like1] = updateForecasterDistribution_m(ForecasterDistribution, PseudoDist,alphas,betas,reward,gamma,like1)
-    likelihood = [];
+    
     if(reward == 1)
-        for i=1:length(ForecasterDistribution);
-            likelihood = [likelihood alphas(i)/(alphas(i)+betas(i))];
-        end
+        likelihood = alphas./(alphas + betas);
     else
-        for i=1:length(ForecasterDistribution);
-            likelihood = [likelihood betas(i)/(alphas(i)+betas(i))];
-        end
+        likelihood = betas./(alphas + betas);
     end
+
     Pseudo_w0 = gamma.*like1.*sum(PseudoDist); % Creating a new forecaster (using simple prior)
     PseudoDist = like1*PseudoDist;
     w0 = Pseudo_w0;
