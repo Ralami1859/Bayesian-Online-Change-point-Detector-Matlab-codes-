@@ -10,9 +10,9 @@
 % -- ForecasterDistribution: Distribution of the forecasters at time t+1
 
 
-function [ForecasterDistribution, PseudoDist,like1] = updateForecasterDistribution_m(ForecasterDistribution, PseudoDist,alphas,betas,reward,gamma,like1)
+function [ForecasterDistribution, PseudoDist,like1] = updateForecasterDistribution_m(ForecasterDistribution, PseudoDist,alphas,betas,x,gamma,like1)
     
-    if(reward == 1)
+    if(x == 1)
         likelihood = alphas./(alphas + betas);
     else
         likelihood = betas./(alphas + betas);
