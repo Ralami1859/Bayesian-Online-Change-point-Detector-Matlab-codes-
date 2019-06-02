@@ -1,3 +1,5 @@
+%% Function for results plotting
+
 function p = PlottingResults(y1,y2, vectChangePoint)
 
  col1 = [1 0 0];
