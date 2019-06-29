@@ -1,3 +1,4 @@
+# Bayesian Online Change-point Detection
 This folder contains:
 
  --- the matlab codes of four versions of the Bayesian Online Change-point detector
