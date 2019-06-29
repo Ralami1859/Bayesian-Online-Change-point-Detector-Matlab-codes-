@@ -1,4 +1,4 @@
-# Bayesian-Online-Change-point-Detector-Matlab-codes-
+# Bayesian Online Change point Detector
 Implementation of the Bayesian Online Change-point Detector of Ryan Prescott Adams and David McKay (2007). 
 
 This folder contains:
