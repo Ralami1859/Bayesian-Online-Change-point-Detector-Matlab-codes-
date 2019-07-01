@@ -1,6 +1,5 @@
 # Bayesian Online Change point Detector
-Implementation of the Bayesian Online Change-point Detector of Ryan Prescott Adams and David McKay (2007). (The original version of the Bayesian Online Change-point Detector can be found here: https://arxiv.org/abs/0710.3742
-)
+Implementation of the Bayesian Online Change-point Detector of Ryan Prescott Adams and David McKay (2007).  (https://arxiv.org/abs/0710.3742)
 
 This folder contains:
 
